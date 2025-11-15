@@ -40,7 +40,7 @@
     main{margin-top:20px}
     .grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
     .services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .service{background:linear-gradient(180deg,#fff,#fbfdff);padding:14px;border-radius:12px;border:1px solid rgba(15,23,42,0.02);display:flex;gap:12px;align-items:center}
+    .service{background:linear-gradient(180deg,#fff,#fbfdff);padding:14px;border-radius:12px;border:1px solid rgba(15,23,42,0.02);display:flex;flex-direction:column;gap:8px}
     .service svg{width:44px;height:44px;flex-shrink:0}
     h2.section{margin:0 0 12px;font-size:18px}
     .info{display:flex;flex-direction:column;gap:12px}
@@ -62,14 +62,6 @@
   </style>
 </head>
 <body>
-<form id="contactForm">
-  <input type="text" name="name" placeholder="Ваше имя" required>
-  <input type="text" name="phone" placeholder="Телефон" required>
-  <textarea name="message" placeholder="Сообщение" required></textarea>
-  <button type="submit">Отправить</button>
-</form>
-
-<p id="status"></p>
   <header>
     <div class="container">
       <div class="top">
@@ -117,16 +109,24 @@
       <section>
         <h2 class="section">Чем занимаемся</h2>
         <div class="services" id="services">
-          <div class="service"><div style="font-weight:700">Техническое обслуживание</div><div style="font-size:13px;color:var(--muted)">Замена масел, фильтров, развал-схождение</div></div>
-          <div class="service"><div style="font-weight:700">Кузовной ремонт</div><div style="font-size:13px;color:var(--muted)">Покраска, удаление вмятин, полировка</div></div>
+          <div class="service">
+            <div style="font-weight:700">Техническое обслуживание</div>
+            <div style="font-size:13px;color:var(--muted)">Замена масел, фильтров, развал-схождение</div>
+          </div>
+          <div class="service">
+            <div style="font-weight:700">Кузовной ремонт</div>
+            <div style="font-size:13px;color:var(--muted)">Покраска, удаление вмятин, полировка</div>
+          </div>
         </div>
 
         <div style="margin-top:18px" class="card">
           <h3 style="margin:0 0 8px">Преимущества</h3>
           <ul style="margin:0;padding-left:18px;color:var(--muted)">
-            <li>Опытные мастера — 10+ лет</li>
+            <li>Опытные мастера — 10+ лет работы</li>
             <li>Честные цены и прозрачные сметы</li>
             <li>Быстрый сервис и гарантия качества</li>
+            <li>Современное оборудование и технологии</li>
+            <li>Индивидуальный подход к каждому клиенту</li>
           </ul>
         </div>
       </section>
@@ -149,12 +149,11 @@
           <h3 style="margin:0 0 10px">График работы</h3>
           <table>
             <tr><td>Пн</td><td style="text-align:right">10:00 — 22:00</td></tr>
-<tr><td>Вт</td><td style="text-align:right">10:00 — 22:00</td></tr>
-<tr><td>Ср</td><td style="text-align:right">10:00 — 22:00</td></tr>
-<tr><td>Чт</td><td style="text-align:right">10:00 — 22:00</td></tr>
-<tr><td>Пт</td><td style="text-align:right">10:00 — 22:00</td></tr>
-<tr><td>Сб</td><td style="text-align:right">10:00 — 22:00</td></tr>
-
+            <tr><td>Вт</td><td style="text-align:right">10:00 — 22:00</td></tr>
+            <tr><td>Ср</td><td style="text-align:right">10:00 — 22:00</td></tr>
+            <tr><td>Чт</td><td style="text-align:right">10:00 — 22:00</td></tr>
+            <tr><td>Пт</td><td style="text-align:right">10:00 — 22:00</td></tr>
+            <tr><td>Сб</td><td style="text-align:right">10:00 — 22:00</td></tr>
             <tr><td>Воскресенье</td><td style="text-align:right">Выходной</td></tr>
           </table>
         </div>
@@ -176,5 +175,4 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
-<script src="script.js"></script>
 </html>
