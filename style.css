@@ -1,0 +1,60 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Правки для телефонов */
+@media (max-width: 768px) {
+  header {
+    border-radius: 0;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-left, .hero-right {
+    width: 100%;
+    max-width: 100%;
+  }
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+  white-space: nowrap;
+  }
+}
+
+/* Правки для сетки */
+@media (min-width: 900px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 18px;
+  }
+}
+@media (max-width: 899px) {
+  .grid {
+    display: block;
+  }
+}
+/* ===== Горизонтальное меню ВСЕГДА ===== */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap; /* ❗ запрещаем перенос логотипа и меню */
+}
+
+nav {
+  display: flex;
+  flex-wrap: nowrap; /* ❗ кнопки не переходят на вторую строку */
+  gap: 10px;
+}
+
+nav a {
+  white-space: nowrap; /* ❗ текст в кнопках не переносится */
+}
